@@ -40,15 +40,14 @@ const Signin = () => {
     axios.post('http://localhost:8080/sdp/signin', params)
       .then((response) => {
         const { data } = response;
-        alert(data);  // Display the success message from the backend
-        
+        localStorage.setItem('token', data);
         // Assuming the response contains role information
         if (data.includes('Admin')) {
-          navigate('/adminh'); // Navigate to Admin Home Page
+          navigate('/admindashboard'); // Navigate to Admin Home Page
         } else if (data.includes('Faculty')) {
-          navigate('/facultyh'); // Navigate to Faculty Home Page
+          navigate('/facultydashboard'); // Navigate to Faculty Home Page
         } else if (data.includes('Student')) {
-          navigate('/studenth'); // Navigate to Student Home Page
+          navigate('/studentdashboard'); // Navigate to Student Home Page
         } else {
           setError('Unknown role. Please try again.');
         }

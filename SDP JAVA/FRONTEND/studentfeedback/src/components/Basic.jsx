@@ -1,6 +1,6 @@
 import React from 'react';
 import './Basic.css'; 
-
+import basisPhoto from '../assets/student-feedback-app.jpg';
 const Basic = () => {
   return (
     <div className="basic-container">
@@ -15,11 +15,7 @@ const Basic = () => {
       </nav>
 
       <div className="main-content">
-        <img 
-          src="assets\student-feedback-app.jpg" 
-          alt="Feedback System" 
-          className="main-image" 
-        />
+        <img src={basisPhoto} alt="Student Feedback System" />
         <h1>Welcome to the Student Feedback System</h1>
         <p>Providing a platform to share valuable feedback efficiently.</p>
       </div>

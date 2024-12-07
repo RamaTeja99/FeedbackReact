@@ -6,7 +6,7 @@ const StudentHome = () => {
   return (
     <div>
       <ResponsiveAppBarS />
-      <div style={{ padding: '20px' }}>
+      <div style={{ marginTop: '100px' }}>
         <h1>Welcome to Student Home Page</h1>
         {/* Add any student-specific content here */}
       </div>

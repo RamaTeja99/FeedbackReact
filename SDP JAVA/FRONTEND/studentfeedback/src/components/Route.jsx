@@ -13,7 +13,14 @@ import ViewFeedbackPage from './HomePages/ViewFeedbackPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import TeamPage from './TeamPage';
-
+import AddCourse from './HomePages/AddCourse';
+import RegisterCourse from './HomePages/RegisterCourse';
+import CourseStudents from './HomePages/CourseStudents';
+import StudentFeedBackF from './HomePages/StudentFeedBackF';
+import StudentFeedBackToAdmin from './HomePages/StudentFeedBackToAdmin';
+import ViewFeedbackS from './HomePages/ViewFeedbackS';
+import SendFeedbackToAdminByFaculty from './HomePages/SendFeedbackToAdminByFaculty';
+import ViewFeedbackF from './HomePages/ViewFeedbackF';
 const RouteComponent = () => {
   return (
     <Router>
@@ -24,17 +31,25 @@ const RouteComponent = () => {
         <Route path="/signup" element={<Signup />} />
         
         {/* Admin Routes */}
-        <Route path="/adminh" element={<AdminHome />} />
+        <Route path="/admindashboard" element={<AdminHome />} />
         <Route path="/addfaculty" element={<AddFacultyPage />} />
         <Route path="/viewfaculty" element={<ViewFacultyPage />} />
         <Route path="/viewusers" element={<ViewUsersPage />} />
         <Route path="/viewfeedback" element={<ViewFeedbackPage />} />
+        <Route path="/addcourse" element={<AddCourse />} />
 
         {/* Faculty Routes */}
-        <Route path="/facultyh" element={<FacultyHome />} />
+        <Route path="/facultydashboard" element={<FacultyHome />} />
+        <Route path='/coursestudents' element={<CourseStudents />} />
+        <Route path='/sendfeedbacktoadminbyfaculty' element={<SendFeedbackToAdminByFaculty/>} />
+        <Route path="/viewfeedbackforfaculty" element={<ViewFeedbackF />} />
         
         {/* Student Routes */}
-        <Route path="/studenth" element={<StudentHome />} />
+        <Route path="/studentdashboard" element={<StudentHome />} />
+        <Route path="/registercourse" element={<RegisterCourse />} />
+        <Route path="/sendfeedbacktofaculty" element={<StudentFeedBackF />} />
+        <Route path="/sendfeedbacktoadmin" element={<StudentFeedBackToAdmin />} />
+        <Route path="/viewfeedbackforstudent" element={<ViewFeedbackS />} />
         
         {/* Static Pages */}
         <Route path="/about" element={<AboutPage />} />

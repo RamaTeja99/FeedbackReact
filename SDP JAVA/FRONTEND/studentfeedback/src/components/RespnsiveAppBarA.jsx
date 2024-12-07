@@ -12,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 
-const pages = ['Dashboard', 'Add Faculty', 'View Faculty', 'View Users', 'View Feedback'];
+const pages = ['Admin Dashboard', 'Add Faculty', 'Add Course','View Faculty', 'View Users', 'View Feedback'];
 
 function ResponsiveAppBarA() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -69,7 +69,7 @@ function ResponsiveAppBarA() {
           <Box sx={{ ml: 'auto' }}>
             <Button
               color="inherit"
-              onClick={() => navigate('/login')}
+              onClick={() => navigate('/signup')}
               sx={{ my: 2 }}
             >
               Logout
